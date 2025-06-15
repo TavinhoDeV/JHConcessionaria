@@ -1,0 +1,100 @@
+<!-- Use a mesma estrutura do index.html no topo -->
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JH Concessionária</title>
+  <link rel="shortcut icon" href="/imagens/Logo..jpg" type="image/x-icon">
+  <link rel="stylesheet" href="/css/estilo.css">
+  <link rel="stylesheet" href="/js/script.js">
+  
+</head>
+<main>
+  <a href="index.html">← Voltar</a>
+  </select>
+    <section class="carros">
+      <div class="carro">
+        <img src="/imagens/bmw.jpg" alt="BMW Série 3">
+        <h3>BMW Série 3</h3>
+        <p>Ano: 2023<br>Preço: R$ 280.000</p>
+        <a href="/JH-Concessionaria/BMWDetalhes.html" class="botao">Ver Detalhes</a>
+      </div>
+
+      <div class="carro">
+        <img src="/imagens/Audi.png" alt="Audi A3 Sedan">
+        <h3>Audi A5 Sportback</h3>
+        <p>Ano: 2024<br>Preço: R$ 400.000</p>
+        <a href="/JH-Concessionaria/audiDetalhes.html" class="botao">Ver Detalhes</a>
+      </div>
+
+      <div class="carro">
+        <img src="/imagens/Porsche.png" alt="Volkswagen Gol">
+        <h3>Porsche 911</h3>
+        <p>Ano: 2022<br>Preço: R$1.080.000 </p>
+        <a href="/JH-Concessionaria/PorscheDetalhes.html" class="botao">Ver Detalhes</a>
+      </div>
+      <div class="carro">
+        <img src="/imagens/volvo-removebg-preview.png" alt="Volkswagen Gol">
+        <h3>Volvo </h3>
+        <p>Ano: 2025<br>Preço: R$ 300.000</p>
+        <a href="/JH-Concessionaria/VolvoDetalhes.html" class="botao">Ver Detalhes</a>
+      </div>
+      <div class="carro">
+        <img src="/imagens/MercedesAMG.png" alt="Volkswagen Gol">
+        <h3>Mercedes G63</h3>
+        <p>Ano: 2021<br>Preço: R$ 2.500.000</p>
+        <a href="/JH-Concessionaria/MercedesDetalhes.html" class="botao">Ver Detalhes</a>
+      </div>
+      <div class="carro">
+        <img src="/imagens/Ferrari_Roma.png" alt="Audi A3 Sedan">
+        <h3>Ferrari Roma</h3>
+        <p>Ano: 2024<br>Preço: R$ 3.000.000</p>
+        <a href="/JH-Concessionaria/DetalhesFerrari.html" class="botao">Ver Detalhes</a>
+      </div>
+      <div class="carro">
+        <img src="/imagens/download.png" alt="Audi A3 Sedan">
+        <h3>Honda  Civic</h3>
+        <p>Ano: 2024<br>Preço: R$ 400.000</p>
+        <a href="/JH-Concessionaria/TyperRdetalhes.html" class="botao">Ver Detalhes</a>
+      </div>
+       <div class="carro">
+        <img src="/imagens/toyota.png" alt="Audi A3 Sedan">
+        <h3>Toyota  Corolla</h3>
+        <p>Ano: 2024<br>Preço: R$ 160.000</p>
+        <a href="/JH-Concessionaria/Corolla.html" class="botao">Ver Detalhes</a>
+      </div>
+       <div class="carro">
+        <img src="/imagens/JEEP.png" alt="Audi A3 Sedan">
+        <h3>JEEP Compass</h3>
+        <p>Ano: 2022<br>Preço: R$ 200.000</p>
+        <a href="/JH-Concessionaria/JEEP.html" class="botao">Ver Detalhes</a>
+      </div>
+      <div class="carro">
+        <img src="/imagens/imagePrisma.png" alt="Audi A3 Sedan">
+        <h3>Chevrolet Prisma</h3>
+        <p>Ano: 2019<br>Preço: R$50.000</p>
+        <a href="/JH-Concessionaria/Prisma.html" class="botao">Ver Detalhes</a>
+      </div>
+
+  </section>
+  <script>
+    const filtro = document.getElementById('filtro');
+    const carros = document.querySelectorAll('.carro');
+
+    filtro.addEventListener('change', () => {
+      const valor = filtro.value;
+
+      carros.forEach(carro => {
+        const marca = carro.getAttribute('data-marca');
+
+        if (valor === 'todos' || marca === valor) {
+          carro.style.display = 'block';
+        } else {
+          carro.style.display = 'none';
+        }
+      });
+    });
+  </script>
+ 
+</main>
